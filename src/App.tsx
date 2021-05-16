@@ -71,6 +71,21 @@ const App = () => {
         setTeamList(updatedVotes);
     };
 
+    function setVoting(eachParticipant: ITeamList) {
+        return (data: IDetailedData,
+                idx: number) => {
+            const venue = data.response.venue;
+            const testId = `voting-section-${idx}`;
+            return <Voting key={idx}
+                           onClick={() => handleVoting(venue.id,
+                               eachParticipant.id)}
+                           eachParticipant={eachParticipant}
+                           venue={venue}
+                           testId={testId}
+            />
+        };
+    }
+
     return (
         <div className="container">
             <SearchBar value={area} onChange={(e) => {
@@ -101,18 +116,7 @@ const App = () => {
                                          eachParticipant={eachParticipant}
                                          onChange={e => handleParticipantName(e, index)}
                                          never={restaurants}
-                                         callback={(data: IDetailedData,
-                                                    idx: number) => {
-                                             const venue = data.response.venue;
-                                             const testId = `voting-section-${idx}`;
-                                             return <Voting key={idx}
-                                                            onClick={() => handleVoting(venue.id,
-                                                                eachParticipant.id)}
-                                                            eachParticipant={eachParticipant}
-                                                            venue={venue}
-                                                            testId={testId}
-                                             />
-                                         }}
+                                         callback={setVoting(eachParticipant)}
                                          iTeamLists={teamList}
                                          onClick={() => handleInputRemove(index)}/>
                 })}
