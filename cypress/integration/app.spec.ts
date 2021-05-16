@@ -61,7 +61,6 @@ describe('Test whole app component', () => {
 
         // Then
         cy.get('[data-test-id="participants"]').find('input').should('have.length', 2)
-
     })
 })
 
