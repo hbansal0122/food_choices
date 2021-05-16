@@ -53,7 +53,7 @@ describe('Test whole app component', () => {
             .find('[data-test-id="winner"]').should('have.length', 1)
     })
 
-    it('Check if remove button deleted a participant form the list',  () => {
+    it('Check if remove button deletes a participant form the list',  () => {
 
         // When
         cy.get('[data-test-id="participant-area-0"]')
