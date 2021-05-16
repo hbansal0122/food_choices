@@ -1,38 +1,151 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background: #f7f7f7;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+    width: 700px;
+    position: absolute;
+    left: 30%;
+    top: 10%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header {
+    display: table-caption;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+    padding-bottom: 30px;
+    color: #323232;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+    width: 300px;
+    padding: 10px
+}
+
+.input-box {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+button {
+    width: 200px;
+    margin-left: 50px;
+    border-radius: 30px;
+    height: 50px;
+    background: #544cb4;
+}
+
+button:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+.selectable-area {
+    text-align: center;
+}
+
+.selectable-area:hover {
+    background-color: darkseagreen;
+    cursor: pointer;
+}
+
+.add-member {
+    margin-top: 20px;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    width: 900px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 36px;
+}
+
+.styled-table thead tr {
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table th:first-child {
+    width: 25%;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+}
+
+.remove {
+    text-align: center;
+}
+
+.remove-button {
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    color: #323232;
+    background: olivedrab;
+    border-radius: 20px;
+}
+
+.remove-button:hover {
+    background: palevioletred;
+}
+
+.rating {
+    min-width: 50px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.category {
+    min-width: 50px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.link {
+    min-width: 100px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.remove-span:hover {
+    color: #323232;
+}
+
+.remove-icon {
+    cursor: pointer;
+    color: #544cb4;
+}
+
+.winner {
+    min-width: 50px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.green{
+    color: green;
 }

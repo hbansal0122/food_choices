@@ -125,7 +125,7 @@ export interface Venue {
     photos: Photos;
 }
 
-export interface Item {
+export interface IItem {
     reasons: Reasons;
     venue: Venue;
     referralId: string;
@@ -134,7 +134,7 @@ export interface Item {
 export interface Group {
     type: string;
     name: string;
-    items: Item[];
+    items: IItem[];
 }
 
 export interface Response {
