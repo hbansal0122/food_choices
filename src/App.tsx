@@ -71,7 +71,7 @@ const App = () => {
         setTeamList(updatedVotes);
     };
 
-    function setVoting(eachParticipant: ITeamList) {
+    const setVoting = (eachParticipant: ITeamList) => {
         return (data: IDetailedData,
                 idx: number) => {
             const venue = data.response.venue;
