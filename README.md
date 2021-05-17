@@ -17,6 +17,11 @@ For testing you can use ```client_id = F0MU3E24OUE0EYBLE1M253DA51ELKRS2GWJKUVQUP
 
 In the project directory, you can run:
 
+### `yarn install`
+
+This will install all the dependencies from ```package.json``` file.
+
+
 ### `yarn start`
 
 Runs the app in the development mode.\
