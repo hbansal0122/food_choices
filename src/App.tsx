@@ -59,7 +59,7 @@ const App = () => {
                 id: countInputBox
             }
         ]);
-    }, [teamList, setTeamList]);
+    }, [teamList]);
 
     const handleVoting = (resId: string, userId: number) => {
         const updatedVotes = teamList.map((item) => {
