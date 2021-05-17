@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {AppState} from './redux/store';
 import {ITeamList, IWinner} from "./interface";
@@ -61,7 +61,7 @@ const App = () => {
         ]);
     };
 
-    const handleVoting = useCallback((resId: string, userId: number) => {
+    const handleVoting = (resId: string, userId: number) => {
         const updatedVotes = teamList.map((item) => {
             if (item.id === userId) {
                 return {...item, restaurant: resId};
@@ -69,7 +69,7 @@ const App = () => {
             return item;
         });
         setTeamList(updatedVotes);
-    }, [teamList]);
+    };
 
     const setVoting = (eachParticipant: ITeamList) => {
         return (data: IDetailedData,
