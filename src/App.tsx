@@ -43,14 +43,14 @@ const App = () => {
         list[index].name = value
         setTeamList(list);
     };
-    const handleInputRemove = useCallback((index: number) => {
+    const handleInputRemove = (index: number) => {
         const list = [...teamList];
         const indexToRemove = list.findIndex(item => item.id === index)
         list.splice(indexToRemove, 1)
         setTeamList(list)
-    }, [teamList]);
+    };
 
-    const handleInputAdd = useCallback((countInputBox: number) => {
+    const handleInputAdd = (countInputBox: number) => {
         setCountInputBox(countInputBox + 1);
         setTeamList([...teamList,
             {
@@ -59,7 +59,7 @@ const App = () => {
                 id: countInputBox
             }
         ]);
-    }, [teamList]);
+    };
 
     const handleVoting = (resId: string, userId: number) => {
         const updatedVotes = teamList.map((item) => {
